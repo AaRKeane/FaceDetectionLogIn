@@ -3,6 +3,7 @@ Embedding Face Detection/Recognition on Log-In Application
 ----------------------------------------------------------
 Incase if the repository/project won't work:
 Get the missing files in my google drivehttps://drive.google.com/drive/folders/1RuArbmNhG7cH5ydpTRAMorscySLjfTnC?usp=sharing
+SQL:MSSQL, UNZIP LogInDb and attach the files to the SQL Management
 ----------------------------------------------------------
 Download and Paste the contents of the ZIP Files
 Bin.Zip --> Unzip to \LoginApp\LoginApp

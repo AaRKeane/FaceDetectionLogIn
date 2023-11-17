@@ -61,6 +61,7 @@
             this.Fname.Name = "Fname";
             this.Fname.Size = new System.Drawing.Size(174, 20);
             this.Fname.TabIndex = 0;
+            this.Fname.TextChanged += new System.EventHandler(this.Fname_TextChanged);
             // 
             // Mname
             // 
@@ -68,6 +69,7 @@
             this.Mname.Name = "Mname";
             this.Mname.Size = new System.Drawing.Size(174, 20);
             this.Mname.TabIndex = 0;
+            this.Mname.TextChanged += new System.EventHandler(this.Mname_TextChanged);
             // 
             // Lname
             // 
@@ -75,6 +77,7 @@
             this.Lname.Name = "Lname";
             this.Lname.Size = new System.Drawing.Size(174, 20);
             this.Lname.TabIndex = 0;
+            this.Lname.TextChanged += new System.EventHandler(this.Lname_TextChanged);
             // 
             // userName
             // 
@@ -215,6 +218,7 @@
             this.textBox1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(442, 283);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(253, 29);
             this.textBox1.TabIndex = 16;
             // 

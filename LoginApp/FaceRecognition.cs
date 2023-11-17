@@ -26,7 +26,6 @@ namespace LoginApp
             face.openCamera(pbCamera, pbCapture);
             face.isTrained = true;
             face.getPersonName(verify);
-            db.sp_verifyFace(verify.Text);
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -35,28 +34,22 @@ namespace LoginApp
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            try
+            
+            var fetch = db.sp_verifyFace(verify.Text).Count();
+            if (fetch == 1)
             {
-                var fetch = db.sp_verifyFace(verify.Text).Count();
-                if (fetch == 1)
+                if (db.sp_faceType(verify.Text) == 1)
                 {
-                    if (db.sp_faceType(verify.Text) == 1)
-                    {
-                        MessageBox.Show("Welcome Staff, " + verify.Text, "Staff Account");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Welcome Admin, " + verify.Text, "Admin Account");
-                    }
+                    MessageBox.Show("Welcome Staff, " + verify.Text, "Staff Account");
                 }
                 else
                 {
-                    MessageBox.Show("RECORD NOT FOUND", "MISMATCH", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Welcome Admin, " + verify.Text, "Admin Account");
                 }
             }
-            catch
+            else
             {
-                MessageBox.Show("Error");
+                MessageBox.Show("RECORD NOT FOUND", "MISMATCH", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             
         }

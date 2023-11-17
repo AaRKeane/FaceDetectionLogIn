@@ -15,6 +15,7 @@ namespace LoginApp
     {
         DataLoginDataContext db = new DataLoginDataContext();
         FaceRec face = new FaceRec();
+        string fullname;
         public RegisterForm()
         {
             InitializeComponent();
@@ -40,6 +41,22 @@ namespace LoginApp
             face.isTrained = true;
             face.Save_IMAGE(textBox1.Text.ToUpper());
             MessageBox.Show("FACE RECORDED");
+        }
+
+        private void Fname_TextChanged(object sender, EventArgs e)
+        {
+            textBox1.Text = Fname.Text;
+        }
+
+        private void Lname_TextChanged(object sender, EventArgs e)
+        {
+            textBox1.Text = string.Concat(Fname.Text," ",Mname.Text, " ",Lname.Text);
+        }
+
+        private void Mname_TextChanged(object sender, EventArgs e)
+        {
+            textBox1.Text = string.Concat(Fname.Text, " ", Mname.Text);
+            
         }
     }
 }

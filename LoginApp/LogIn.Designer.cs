@@ -34,7 +34,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(660, 353);
+            this.ClientSize = new System.Drawing.Size(685, 369);
             this.Name = "LogIn";
             this.Text = "LogIn";
             this.ResumeLayout(false);
